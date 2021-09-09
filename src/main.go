@@ -20,6 +20,6 @@ func main() {
 	restful.Add(api.NewApi())
 	fs := http.FileServer(http.Dir("./static"))
 	http.Handle("/", fs)
-	log.Println("listen at: http://0.0.0.0:12580")
-	http.ListenAndServe("0.0.0.0:12580", nil)
+	log.Println("listen at: http://127.0.0.1:12580")
+	http.ListenAndServe("127.0.0.1:12580", nil)
 }
